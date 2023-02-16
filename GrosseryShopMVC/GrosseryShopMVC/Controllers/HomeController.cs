@@ -1,7 +1,7 @@
 ﻿namespace GrosseryShopMVC.Controllers
 {
     using System.Diagnostics;
-    using GrosseryShopMVC.Models;
+    using GrosseryShopMVC.ViewModel;
     using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : Controller
