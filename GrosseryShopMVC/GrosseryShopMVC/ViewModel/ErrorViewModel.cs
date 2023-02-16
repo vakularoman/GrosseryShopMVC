@@ -1,4 +1,4 @@
-namespace GrosseryShopMVC.Models
+namespace GrosseryShopMVC.ViewModel
 {
     public class ErrorViewModel
     {
