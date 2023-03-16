@@ -1,4 +1,4 @@
-﻿namespace AquaPlayground.Models
+﻿namespace GrosseryShopMVC.Models
 {
     using Microsoft.AspNetCore.Identity;
 
