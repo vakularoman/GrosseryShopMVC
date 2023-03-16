@@ -1,4 +1,4 @@
-﻿namespace AquaPlayground.Models
+﻿namespace GrosseryShopMVC.Models
 {
     public class ProductCategory
     {

@@ -25,7 +25,7 @@ namespace GrosseryShopMVC.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("AquaPlayground.Models.CartProduct", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.CartProduct", b =>
                 {
                     b.Property<long>("CartProductId")
                         .ValueGeneratedOnAdd()
@@ -51,7 +51,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("CartProducts");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Comment", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Comment", b =>
                 {
                     b.Property<long>("CommentId")
                         .ValueGeneratedOnAdd()
@@ -80,7 +80,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.FavoriteProduct", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.FavoriteProduct", b =>
                 {
                     b.Property<long>("FavoriteProductId")
                         .ValueGeneratedOnAdd()
@@ -103,7 +103,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("FavoriteProducts");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Manufacturer", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Manufacturer", b =>
                 {
                     b.Property<long>("ManufacturerId")
                         .ValueGeneratedOnAdd()
@@ -122,7 +122,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("Manufacturers");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Nutrition", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Nutrition", b =>
                 {
                     b.Property<long>("NutritionId")
                         .ValueGeneratedOnAdd()
@@ -153,7 +153,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("Nutritions");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Order", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Order", b =>
                 {
                     b.Property<long>("OrderId")
                         .ValueGeneratedOnAdd()
@@ -177,7 +177,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.OrderToProduct", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.OrderToProduct", b =>
                 {
                     b.Property<long>("OrderToProductId")
                         .ValueGeneratedOnAdd()
@@ -203,7 +203,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("OrdersToProducts");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.PaymentSystem", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.PaymentSystem", b =>
                 {
                     b.Property<long>("PaymentSystemId")
                         .ValueGeneratedOnAdd()
@@ -219,7 +219,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("PaymentSystems");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Product", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Product", b =>
                 {
                     b.Property<long>("ProductId")
                         .ValueGeneratedOnAdd()
@@ -257,7 +257,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.ProductCategory", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.ProductCategory", b =>
                 {
                     b.Property<long>("ProductCategoryId")
                         .ValueGeneratedOnAdd()
@@ -273,7 +273,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("ProductCategories");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.ProductToTag", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.ProductToTag", b =>
                 {
                     b.Property<long>("ProductToTagId")
                         .ValueGeneratedOnAdd()
@@ -296,7 +296,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("ProductsToTags");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.ProductType", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.ProductType", b =>
                 {
                     b.Property<long>("ProductTypeId")
                         .ValueGeneratedOnAdd()
@@ -317,7 +317,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("ProductTypes");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Role", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Role", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -347,7 +347,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("AspNetRoles", (string)null);
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Tag", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Tag", b =>
                 {
                     b.Property<long>("TagId")
                         .ValueGeneratedOnAdd()
@@ -363,7 +363,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("Tags");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.User", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.User", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -437,7 +437,7 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.UserToPaymentSystem", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.UserToPaymentSystem", b =>
                 {
                     b.Property<long>("UserToPaymentSystemId")
                         .ValueGeneratedOnAdd()
@@ -563,15 +563,15 @@ namespace GrosseryShopMVC.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.CartProduct", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.CartProduct", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.Product", "Product")
+                    b.HasOne("GrosseryShopMVC.Models.Product", "Product")
                         .WithMany("CartProducts")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AquaPlayground.Models.User", "User")
+                    b.HasOne("GrosseryShopMVC.Models.User", "User")
                         .WithMany("CartProducts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -582,15 +582,15 @@ namespace GrosseryShopMVC.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Comment", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Comment", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.Product", "Product")
+                    b.HasOne("GrosseryShopMVC.Models.Product", "Product")
                         .WithMany("Comments")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AquaPlayground.Models.User", "User")
+                    b.HasOne("GrosseryShopMVC.Models.User", "User")
                         .WithMany("Comments")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -601,15 +601,15 @@ namespace GrosseryShopMVC.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.FavoriteProduct", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.FavoriteProduct", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.Product", "Product")
+                    b.HasOne("GrosseryShopMVC.Models.Product", "Product")
                         .WithMany("FavoriteProducts")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AquaPlayground.Models.User", "User")
+                    b.HasOne("GrosseryShopMVC.Models.User", "User")
                         .WithMany("FavoriteProducts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -620,20 +620,20 @@ namespace GrosseryShopMVC.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Nutrition", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Nutrition", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.Product", "Product")
+                    b.HasOne("GrosseryShopMVC.Models.Product", "Product")
                         .WithOne("Nutrition")
-                        .HasForeignKey("AquaPlayground.Models.Nutrition", "ProductId")
+                        .HasForeignKey("GrosseryShopMVC.Models.Nutrition", "ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Order", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Order", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.User", "User")
+                    b.HasOne("GrosseryShopMVC.Models.User", "User")
                         .WithMany("Orders")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -642,15 +642,15 @@ namespace GrosseryShopMVC.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.OrderToProduct", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.OrderToProduct", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.Order", "Order")
+                    b.HasOne("GrosseryShopMVC.Models.Order", "Order")
                         .WithMany("OrderProducts")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AquaPlayground.Models.Product", "Product")
+                    b.HasOne("GrosseryShopMVC.Models.Product", "Product")
                         .WithMany("OrderProducts")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -661,15 +661,15 @@ namespace GrosseryShopMVC.Migrations
                     b.Navigation("Product");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Product", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Product", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.Manufacturer", "Manufacturer")
+                    b.HasOne("GrosseryShopMVC.Models.Manufacturer", "Manufacturer")
                         .WithMany("ManufacturerProducts")
                         .HasForeignKey("ManufacturerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AquaPlayground.Models.ProductType", "ProductType")
+                    b.HasOne("GrosseryShopMVC.Models.ProductType", "ProductType")
                         .WithMany("Products")
                         .HasForeignKey("ProductTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -680,15 +680,15 @@ namespace GrosseryShopMVC.Migrations
                     b.Navigation("ProductType");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.ProductToTag", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.ProductToTag", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.Product", "Product")
+                    b.HasOne("GrosseryShopMVC.Models.Product", "Product")
                         .WithMany("ProductTags")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AquaPlayground.Models.Tag", "Tag")
+                    b.HasOne("GrosseryShopMVC.Models.Tag", "Tag")
                         .WithMany("ProductsToTags")
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -699,9 +699,9 @@ namespace GrosseryShopMVC.Migrations
                     b.Navigation("Tag");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.ProductType", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.ProductType", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.ProductCategory", "ProductCategory")
+                    b.HasOne("GrosseryShopMVC.Models.ProductCategory", "ProductCategory")
                         .WithMany("ProductTypes")
                         .HasForeignKey("ProductCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -710,15 +710,15 @@ namespace GrosseryShopMVC.Migrations
                     b.Navigation("ProductCategory");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.UserToPaymentSystem", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.UserToPaymentSystem", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.PaymentSystem", "PaymentSystem")
+                    b.HasOne("GrosseryShopMVC.Models.PaymentSystem", "PaymentSystem")
                         .WithMany("UserPaymentSystems")
                         .HasForeignKey("PaymentSystemId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AquaPlayground.Models.User", "User")
+                    b.HasOne("GrosseryShopMVC.Models.User", "User")
                         .WithMany("UsersToPaymentSystems")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -731,7 +731,7 @@ namespace GrosseryShopMVC.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<long>", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.Role", null)
+                    b.HasOne("GrosseryShopMVC.Models.Role", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -740,7 +740,7 @@ namespace GrosseryShopMVC.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<long>", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.User", null)
+                    b.HasOne("GrosseryShopMVC.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -749,7 +749,7 @@ namespace GrosseryShopMVC.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<long>", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.User", null)
+                    b.HasOne("GrosseryShopMVC.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -758,13 +758,13 @@ namespace GrosseryShopMVC.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<long>", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.Role", null)
+                    b.HasOne("GrosseryShopMVC.Models.Role", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AquaPlayground.Models.User", null)
+                    b.HasOne("GrosseryShopMVC.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -773,29 +773,29 @@ namespace GrosseryShopMVC.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<long>", b =>
                 {
-                    b.HasOne("AquaPlayground.Models.User", null)
+                    b.HasOne("GrosseryShopMVC.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Manufacturer", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Manufacturer", b =>
                 {
                     b.Navigation("ManufacturerProducts");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Order", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Order", b =>
                 {
                     b.Navigation("OrderProducts");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.PaymentSystem", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.PaymentSystem", b =>
                 {
                     b.Navigation("UserPaymentSystems");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Product", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Product", b =>
                 {
                     b.Navigation("CartProducts");
 
@@ -810,22 +810,22 @@ namespace GrosseryShopMVC.Migrations
                     b.Navigation("ProductTags");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.ProductCategory", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.ProductCategory", b =>
                 {
                     b.Navigation("ProductTypes");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.ProductType", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.ProductType", b =>
                 {
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.Tag", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.Tag", b =>
                 {
                     b.Navigation("ProductsToTags");
                 });
 
-            modelBuilder.Entity("AquaPlayground.Models.User", b =>
+            modelBuilder.Entity("GrosseryShopMVC.Models.User", b =>
                 {
                     b.Navigation("CartProducts");
 

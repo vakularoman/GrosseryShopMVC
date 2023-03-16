@@ -1,6 +1,6 @@
 ﻿namespace GrosseryShopMVC.DbSetUp
 {
-    using AquaPlayground.Models;
+    using GrosseryShopMVC.Models;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
 
